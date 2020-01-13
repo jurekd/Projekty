@@ -16,13 +16,7 @@ namespace GUI
         public MainWindow()
         {
             InitializeComponent();
-            zespół = Zespół.OdczytajXML("zespol.xml");
-            //zespół = new Zespół("Ala ma kota",null);
-           
-            textBox_nazwa.Text = zespół.Nazwa;
-            textBox_kierownik.Text = zespół.Kierownik.ToString();
-            lista = lista = new ObservableCollection<CzłonekZespołu>(zespół.członkowie);
-            listbox_czlonkowie.ItemsSource = lista;
+
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -34,9 +28,37 @@ namespace GUI
 
         private void button_zmien_Click(object sender, RoutedEventArgs e)
         {
-            OsobaWIndow okno = new OsobaWIndow(zespół.Kierownik);
-            
+            OsobaWIndow okno = new OsobaWIndow(zespół.Kierownik);   
             okno.ShowDialog();
+            textBox_kierownik.Text = zespół.Kierownik.ToString();
+        }
+
+        private void MenuOtworz_Click(object sender, RoutedEventArgs e)
+        {
+                Microsoft.Win32.OpenFileDialog dlg = new Microsoft.Win32.OpenFileDialog();
+                bool? result = dlg.ShowDialog();
+                if (result == true)
+                {
+                    string filename = dlg.FileName;
+                zespół = Zespół.OdczytajXML(filename);
+                //zespół = new Zespół("Ala ma kota",null);
+
+                textBox_nazwa.Text = zespół.Nazwa;
+                textBox_kierownik.Text = zespół.Kierownik.ToString();
+                lista = lista = new ObservableCollection<CzłonekZespołu>(zespół.członkowie);
+                listbox_czlonkowie.ItemsSource = lista;
+            }
+
+        }
+
+        private void MenuZapisz_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void MenuWyjdz_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

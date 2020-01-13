@@ -7,6 +7,16 @@
         mc:Ignorable="d"
         Title="GUI dla zespołu" Height="450" Width="573">
     <Grid>
+        <DockPanel Grid.ColumnSpan="3">
+            <Menu DockPanel.Dock="Top">
+                <MenuItem Header="_Plik">
+                    <MenuItem Header="_Otwórz" Click="MenuOtworz_Click"/>
+                    <MenuItem Header="_Zapisz" Click="MenuZapisz_Click"/>
+                    <MenuItem Header="_Wyjdź" Click="MenuWyjdz_Click"/>
+                </MenuItem>
+            </Menu>
+            <StackPanel></StackPanel>
+        </DockPanel>
         <Label Content="Nazwa zepołu" HorizontalAlignment="Left" Margin="60,58,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="textBox_nazwa" HorizontalAlignment="Left" Margin="154,62,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="225" IsEnabled="False"/>
         <Label Content="Kierownik" HorizontalAlignment="Left" Margin="60,106,0,0" VerticalAlignment="Top"/>
