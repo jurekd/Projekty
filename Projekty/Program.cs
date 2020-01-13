@@ -24,7 +24,7 @@ namespace Projekty
             try
             {
 
-                członek1 = new CzłonekZespołu("Renata", "Nowak", new DateTime(1992, 10, 22), "92102201347", Osoba.Płcie.K, "projektant");
+                członek1 = new CzłonekZespołu("Beata", "Nowak", new DateTime(1992, 10, 22), "92102201347", Osoba.Płcie.K, "projektant");
                 kierownik = new KierownikZespołu("Adam", "Kowalski", DateTime.Parse("1990-07-01"), "90070100211", Osoba.Płcie.M, 5);
             }
             catch (WrongPESELException e)
