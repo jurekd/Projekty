@@ -5,15 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GUI"
         mc:Ignorable="d"
-        Title="GUI dla zespołu" Height="450" Width="800">
+        Title="GUI dla zespołu" Height="450" Width="573">
     <Grid>
         <Label Content="Nazwa zepołu" HorizontalAlignment="Left" Margin="60,58,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="textBox_nazwa" HorizontalAlignment="Left" Margin="154,62,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="225" IsEnabled="False"/>
         <Label Content="Kierownik" HorizontalAlignment="Left" Margin="60,106,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="textBox_kierownik" HorizontalAlignment="Left" Margin="154,110,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="225"/>
-        <Button x:Name="button_zmien" Content="Zmień" HorizontalAlignment="Left" Margin="415,112,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.353,-0.048" Width="82"/>
+        <Button x:Name="button_zmien" Content="Zmień" HorizontalAlignment="Left" Margin="415,112,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.353,-0.048" Width="82" Click="button_zmien_Click"/>
         <Label Content="Członkowie" HorizontalAlignment="Left" Margin="60,157,0,0" VerticalAlignment="Top"/>
-        <ListBox x:Name="listbox_czlonkowie" Margin="154,157,303,87"/>
+        <ListBox x:Name="listbox_czlonkowie" Margin="154,157,194,87"/>
         <Button Content="Dodaj" HorizontalAlignment="Left" Margin="76,240,0,0" VerticalAlignment="Top" Width="55"/>
         <Button Content="Usuń" HorizontalAlignment="Left" Margin="76,292,0,0" VerticalAlignment="Top" Width="55" Click="Button_Click"/>
 

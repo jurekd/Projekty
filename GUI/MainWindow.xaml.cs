@@ -28,8 +28,15 @@ namespace GUI
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             int zaznaczony = listbox_czlonkowie.SelectedIndex;
-            //lista.RemoveAt(zaznaczony);
+            lista.RemoveAt(zaznaczony);
             zespół.członkowie.RemoveAt(zaznaczony);
+        }
+
+        private void button_zmien_Click(object sender, RoutedEventArgs e)
+        {
+            OsobaWIndow okno = new OsobaWIndow(zespół.Kierownik);
+            
+            okno.ShowDialog();
         }
     }
 }
